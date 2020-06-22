@@ -11,10 +11,10 @@ public class ObserverA implements Observer {
 		
 	}
 	
-	public void update(Color c){
+	public void update(Color c, String color){
 		
 		System.out.println("El codigo del color actual es :"+c);
-		
+		System.out.println("El color actual es :"+color);
 	}
 	
 	

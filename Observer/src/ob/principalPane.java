@@ -2,6 +2,7 @@ package ob;
 import java.util.ArrayList;
 
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
@@ -21,16 +22,17 @@ public class principalPane {
 	
 	public StackPane makePane() {
 		HBox cont = new HBox(30);
+		cont.setAlignment(Pos.CENTER);
 		cont.setPadding(new Insets(15, 12, 15, 12));
 	    cont.setSpacing(10);
 	    
-		Button btn1 = new Button("Cambiar");
+		Button btn1 = new Button("Verde");
 		btn1.setStyle("-fx-background-color: #008000");
 		
-		Button btn2 = new Button("Cambiar");	
+		Button btn2 = new Button("Rojo");	
 		btn2.setStyle("-fx-background-color: #FF0000");
 		
-		Button btn3 = new Button("Cambiar");	
+		Button btn3 = new Button("Amarillo");	
 		btn3.setStyle("-fx-background-color: #FFFF00");
 		
 		cont.getChildren().addAll(btn1,btn2,btn3);
@@ -38,21 +40,21 @@ public class principalPane {
 		btn1.setOnAction(e ->{
 			Color color = Color.GREEN;
 			this.pane.setStyle("-fx-background-color: #008000"); 
-			notificar(color);
+			notificar(color, btn1.getText());
 			
 			
 		});
 		btn2.setOnAction(e ->{
 			Color color = Color.RED;
 			this.pane.setStyle("-fx-background-color: #FF0000"); 
-			notificar(color);
+			notificar(color, btn2.getText());
 			
 			
 		});
 		btn3.setOnAction(e ->{
 			Color color = Color.YELLOW;			
 			this.pane.setStyle("-fx-background-color: #FFFF00"); 
-			notificar(color);
+			notificar(color, btn3.getText());
 			
 		});
 		
@@ -87,9 +89,9 @@ public class principalPane {
 		return observers;
 	}
 	
-	public void notificar(Color c) {
+	public void notificar(Color c, String color) {
 		for (Observer o : observers) {
-			o.update(c);
+			o.update(c, color);
 			
 		}
 		
