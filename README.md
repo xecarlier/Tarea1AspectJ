@@ -23,5 +23,5 @@ Integrantes
 - Alejandro Paz
 - Lenin Freire
 - Bryan Loor
-- Cesar Carlier
+- Xavier Carlier
 - Luis Abrié
