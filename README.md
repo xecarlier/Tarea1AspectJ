@@ -20,8 +20,8 @@ Dentro del repositorio rn src se ha creado cuatro archivos.
 
 Integrantes
 ----
-Alejandro Paz
-Lenin Freire
-Bryan Loor
-Cesar Carlier
-Luis Abrié
+- Alejandro Paz
+- Lenin Freire
+- Bryan Loor
+- Cesar Carlier
+- Luis Abrié
